@@ -328,6 +328,82 @@ h6, .h6 {
   font-size: 1.25rem;
   font-weight: 300; }
 
+
+  .subheading {
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffbd39; 
+}
+h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 800; }
+h1 span {
+      font-weight: 800;
+      color: #ffbd39; }
+
+h2 {
+      font-size: 30px;
+      font-weight: 400; }
+
+.container-header {
+      text-align: center;
+}
+
+.hello-header {
+      color: #ffbd39;
+      font-size: 1.2em;
+}
+
+.name-header {
+      font-size: 3em;
+      font-weight: bold;
+}
+
+.name-header span {
+      font-weight: 900;
+      font-size: 26px;
+      color: #ffbd39;
+}
+
+.title-header {
+   font-size: 1.5em;
+      margin: 0.5em 0;
+}
+
+.buttons-header {
+      margin-top: 2em;
+}
+
+.buttons-header a {
+      text-decoration: none;
+      color: #000;
+      background-color: #f5a623;
+      padding: 0.5em 1em;
+      border-radius: 25px;
+      margin: 0 0.5em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+}
+
+.buttons-header a:hover {
+      background-color: #e59822;
+}
+
+.buttons-header a.secondary {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #f5a623;
+}
+
+.buttons-header a.secondary:hover {
+  background-color: #333;
+}
+
 .display-1 {
   font-size: 6rem;
   font-weight: 300;
@@ -9683,69 +9759,3 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-    .subheading {
-      color: #000000;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #ffbd39; 
-    }
-    h1 {
-      font-size: 60px;
-      color: #fff;
-      line-height: 1.2;
-      font-weight: 800; }
-    h1 span {
-        font-weight: 800;
-        color: #ffbd39; }
-
-    h2 {
-        font-size: 30px;
-        font-weight: 400; }
-
-
-      .container-header {
-          text-align: center;
-      }
-      .hello-header {
-          color: #ffbd39;
-          font-size: 1.2em;
-      }
-      .name-header {
-          font-size: 3em;
-          font-weight: bold;
-      }
-      .name-header span {
-          font-weight: 900;
-          font-size: 26px;
-          color: #ffbd39;
-      }
-      .title-header {
-          font-size: 1.5em;
-          margin: 0.5em 0;
-      }
-      .buttons-header {
-          margin-top: 2em;
-      }
-      .buttons-header a {
-          text-decoration: none;
-          color: #000;
-          background-color: #f5a623;
-          padding: 0.5em 1em;
-          border-radius: 25px;
-          margin: 0 0.5em;
-          font-weight: bold;
-          transition: background-color 0.3s ease;
-      }
-      .buttons-header a:hover {
-          background-color: #e59822;
-      }
-      .buttons-header a.secondary {
-          background-color: #000;
-          color: #fff;
-          border: 1px solid #f5a623;
-      }
-      .buttons-header a.secondary:hover {
-          background-color: #333;
-      }
