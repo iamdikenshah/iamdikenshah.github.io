@@ -329,7 +329,7 @@ h6, .h6 {
   font-weight: 300; }
 
 
-  .subheading {
+.subheading {
     color: #000000;
     font-weight: 600;
     font-size: 14px;
@@ -343,12 +343,12 @@ h1 {
     line-height: 1.2;
     font-weight: 800; }
 h1 span {
-      font-weight: 800;
+      font-weight: 900;
       color: #ffbd39; }
 
 h2 {
       font-size: 30px;
-      font-weight: 400; }
+      font-weight: 600; }
 
 .container-header {
       text-align: center;
@@ -8862,9 +8862,9 @@ h1, h2, h3, h4, h5,
         width: 130px; }
 
 .ftco-about .counter-wrap .text p {
-  font-size: 20px; }
+  font-size: 30px; }
   .ftco-about .counter-wrap .text p span {
-    font-weight: 400;
+    font-weight: 500;
     color: #fff; }
   .ftco-about .counter-wrap .text p span.number {
     font-weight: 600;
@@ -9165,7 +9165,7 @@ textarea.form-control {
     letter-spacing: .1em; }
   .ftco-footer .ftco-footer-widget h2 {
     font-weight: normal;
-    color: #fff;
+    color: #ffbd39;
     margin-bottom: 40px;
     font-size: 22px;
     font-weight: 600; }
@@ -9277,6 +9277,7 @@ textarea.form-control {
       right: 0; }
   .heading-section h2 {
     font-size: 50px;
+    color: #ffbd39;
     font-weight: 700; }
     .heading-section h2 span {
       font-weight: 400; }
