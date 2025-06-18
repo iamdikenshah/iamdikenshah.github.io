@@ -12761,7 +12761,7 @@ h5,
 }
 
 .resume-wrap {
-  width: calc(50% - 60px);
+  width: 100%;
   margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
@@ -13167,6 +13167,7 @@ textarea.form-control {
   font-size: 16px;
   background: #000000;
   padding: 7em 0;
+  padding-bottom: 3rem;
   z-index: 0;
 }
 
