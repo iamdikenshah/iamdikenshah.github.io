@@ -12865,6 +12865,29 @@ h5,
   background: #000000;
 }
 
+.certification-wrap {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.certification-1:hover p {
+  color: #000000;
+}
+
+.certification-1:hover {
+  background: #ffbd39;
+}
+
+.primary-span {
+  color: #ffbd39;
+}
+
 .progress-wrap {
   width: 100%;
   margin-bottom: 30px;
