@@ -13169,6 +13169,9 @@ textarea.form-control {
   padding: 7em 0;
   padding-bottom: 3rem;
   z-index: 0;
+  border-top: 0.5px solid rgba(170, 170, 170, 0.6);
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
 }
 
 .ftco-footer .ftco-footer-logo {
@@ -13446,6 +13449,12 @@ textarea.form-control {
   display: block;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.block-23.icon-social {
+  display: flex;
+  gap: 20px;
+  /* adjust space as needed */
 }
 
 @media (max-width: 767.98px) {
