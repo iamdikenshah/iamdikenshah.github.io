@@ -815,7 +815,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
 		integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<script>
+		window.onload = function () {
+			window.scrollTo(0, 0);
+			// For browsers that use history restoration
+			if ('scrollRestoration' in history) {
+				history.scrollRestoration = 'manual';
+			}
+		};
+	</script>
 </body>
 
 </html>
