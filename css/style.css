@@ -50,6 +50,13 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 article,
 aside,
 figcaption,
@@ -434,7 +441,7 @@ h6,
 .subheading {
   color: #000000;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -14134,4 +14141,27 @@ textarea.form-control {
 .img-about .img {
   position: relative;
   z-index: 2;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    max-width: 200px;
+  }
+}
+
+.quick-action {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
