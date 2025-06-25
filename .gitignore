@@ -1,0 +1,56 @@
+# Gitignore for a Static Website (e.g., GitHub Pages)
+
+# Operating System Files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Node.js specific (if you use npm for front-end tooling/build)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.parcel-cache/ # Parcel bundler cache
+.esbuild/     # esbuild cache
+dist/         # Common build output directory (if you use a build step)
+build/        # Another common build output directory
+
+# Environment Variables
+.env
+.env.*
+*.local
+
+# Editor/IDE Specific Files
+.idea/ # IntelliJ IDEA
+.vscode/ # VS Code
+*.sublime-project
+*.sublime-workspace
+.project # Eclipse
+.settings/ # Eclipse
+.c9/ # Cloud9 IDE
+
+# Temporary files, caches
+*.log
+*.tmp
+*.bak
+*~ # Emacs/Vim temporary files
+*.swp # Vim swap files
+
+# Image Optimization Artifacts (if any tool creates these)
+# e.g., if you process images and new optimized versions are generated alongside originals
+# You might want to ignore the original unoptimized images if you only commit optimized ones
+# or ignore a specific output directory for optimized images.
+# Example:
+# images_optimized/
+
+# Generated documentation (if using a doc generator)
+docs/
+!docs/.gitkeep # Keep empty docs directory if needed
+
+# Any specific resource directories that are outputs rather than sources
+# Example: If 'resource/' was purely for compiled CVs and not source, you might ignore it
+# resource/DikenShahCV.pdf # Only if this PDF is dynamically generated and not a source file.
+# In your case, it seems to be a source PDF, so keep it tracked.
+
+# If you ever automate asset bundling into specific folders
+# /css/bundle.min.css # Only if auto-generated and source CSS is committed
+# /js/bundle.min.js   # Only if auto-generated and source JS is committed
