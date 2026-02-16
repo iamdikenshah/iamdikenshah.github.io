@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "title": "Diken Shah – Agentic AI & Mobile Engineering Leader | LangChain, LangGraph, iOS Expert",
+    "description": "Portfolio of Diken Shah — 13+ years in mobile engineering, now building with Agentic AI, LangChain, LangGraph, and RAG. From banking apps to intelligent agentic systems.",
+    "keywords": "Diken Shah, Agentic AI, LangChain, LangGraph, RAG, Agentic AI Engineer, iOS Developer, Swift, SwiftUI, Mobile Architecture, Multi-Agent Systems, Portfolio",
+    "author": "Diken Shah",
+    "canonical": "https://iamdikenshah.github.io/",
+    "ogImage": "https://iamdikenshah.github.io/images/diken_shah.PNG"
+  },
+  "personalInfo": {
+    "name": "Diken Shah",
+    "jobTitle": "Agentic AI Engineer & Mobile Architect",
+    "email": "shah.diken@gmail.com",
+    "phone": "+918460177769",
+    "location": {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "country": "India",
+      "mapLink": "https://maps.app.goo.gl/HpEwoEkHhgh8pNo98"
+    },
+    "workingHours": "Mon – Sat: 9:00 AM – 7:00 PM IST",
+    "profileImage": "./images/diken_shah_optimized.jpg",
+    "cvFile": "./resource/DikenShahCV.pdf",
+    "socialMedia": {
+      "github": "https://github.com/iamdikenshah",
+      "linkedin": "https://www.linkedin.com/in/diken-shah/",
+      "twitter": "https://x.com/Diken_Shah",
+      "instagram": "https://www.instagram.com/iamdikenshah"
+    }
+  },
+  "navigation": [
+    { "label": "Home", "href": "#home-section" },
+    { "label": "About", "href": "#about-section" },
+    { "label": "Expertise", "href": "#services-section" },
+    { "label": "Skills", "href": "#skills-section" },
+    { "label": "Experience", "href": "#resume-section" },
+    { "label": "Projects", "href": "#projects-section" },
+    { "label": "Blog", "href": "#blog-section" },
+    { "label": "Contact", "href": "#contact-section" }
+  ],
+  "hero": {
+    "badge": "Open to Agentic AI & Mobile Projects",
+    "greeting": "Hi, I'm",
+    "name": "Diken Shah",
+    "subtitle": "Agentic AI Engineer & Mobile Architect",
+    "techTags": [
+      { "icon": "fas fa-brain", "name": "Agentic AI" },
+      { "icon": "fas fa-link", "name": "LangChain" },
+      { "icon": "fas fa-project-diagram", "name": "LangGraph" },
+      { "icon": "fas fa-cogs", "name": "CrewAI" },
+      { "icon": "fas fa-database", "name": "RAG" },
+      { "icon": "fas fa-face-smile", "name": "HuggingFace" },
+      { "icon": "fab fa-swift", "name": "Swift" },
+      { "icon": "fas fa-mobile-alt", "name": "SwiftUI" }
+    ],
+    "stats": [
+      { "number": "13+", "label": "Years Building" },
+      { "number": "50+", "label": "Products Shipped" },
+      { "number": "6+", "label": "Industries" }
+    ],
+    "actions": [
+      {
+        "text": "View Projects",
+        "href": "#projects-section",
+        "icon": "fas fa-arrow-right",
+        "type": "primary"
+      },
+      {
+        "text": "Download CV",
+        "href": "./resource/DikenShahCV.pdf",
+        "icon": "fas fa-download",
+        "type": "outline",
+        "download": "Diken-Shah-CV.pdf"
+      }
+    ]
+  },
+  "about": {
+    "sectionTag": "Get To Know Me",
+    "sectionTitle": "About Me",
+    "journeyCards": [
+      {
+        "icon": "fas fa-mobile-alt",
+        "title": "The Mobile Foundation",
+        "description": "Started building <strong class=\"highlight\">iOS apps</strong> over 13 years ago — from <strong class=\"highlight\">banking platforms</strong> (Backbase, retail & business banking) to <strong class=\"highlight\">healthcare</strong>, <strong class=\"highlight\">e-commerce</strong>, and <strong class=\"highlight\">IoT</strong>. Got deep into <strong class=\"highlight\">Swift</strong>, <strong class=\"highlight\">SwiftUI</strong>, and <strong class=\"highlight\">Clean Architecture</strong>."
+      },
+      {
+        "icon": "fas fa-brain",
+        "title": "The AI Pivot",
+        "description": "Got hooked on <strong class=\"highlight\">Agentic AI</strong> — not just using ChatGPT, but architecting real agentic workflows with it. Now hands-on with <strong class=\"highlight\">LangChain</strong>, <strong class=\"highlight\">LangGraph</strong>, <strong class=\"highlight\">RAG pipelines</strong>, <strong class=\"highlight\">vector databases</strong>, and <strong class=\"highlight\">multi-agent systems</strong>. Also exploring <strong class=\"highlight\">HuggingFace SLMs</strong> and <strong class=\"highlight\">task-based models</strong> for efficient, specialized AI solutions."
+      },
+      {
+        "icon": "fas fa-users-cog",
+        "title": "Where I Am Now",
+        "description": "Split my time between <strong class=\"highlight\">leading engineering teams</strong>, building <strong class=\"highlight\">agentic AI products</strong>, and leveraging <strong class=\"highlight\">LLMs and SLMs in real production workflows</strong> — not just demos. Still ship mobile apps when the right project comes along."
+      }
+    ]
+  },
+  "expertise": {
+    "sectionTag": "What I Do Best",
+    "sectionTitle": "Expertise",
+    "sectionDescription": "I work across agentic AI and mobile — from designing agentic workflows to shipping production iOS apps. Here's where I spend most of my time.",
+    "cards": [
+      {
+        "icon": "fas fa-brain",
+        "title": "Agentic AI & Workflow Systems",
+        "description": "Designing agentic workflows with LangChain, LangGraph, and CrewAI. Building RAG pipelines, tool-calling agents, and leveraging HuggingFace SLMs and task-based models for production-ready AI solutions."
+      },
+      {
+        "icon": "fas fa-mobile-alt",
+        "title": "iOS & Mobile Architecture",
+        "description": "13+ years of native iOS — Swift, SwiftUI, Combine, Clean Architecture. From banking apps handling millions of transactions to complex IoT integrations."
+      },
+      {
+        "icon": "fas fa-users-cog",
+        "title": "Engineering Leadership",
+        "description": "Managing engineering teams, defining tech strategy, running Agile sprints. I care about shipping fast without cutting corners on quality."
+      }
+    ]
+  },
+  "certifications": {
+    "sectionTag": "Professional Growth",
+    "sectionTitle": "Certifications",
+    "items": [
+      { "icon": "fas fa-link", "title": "LangChain & LangGraph — Building Agentic AI Applications" },
+      { "icon": "fas fa-robot", "title": "ChatGPT Complete Guide: Learn Midjourney, ChatGPT 4 & More" },
+      { "icon": "fas fa-database", "title": "RAG & Vector Databases — Retrieval Augmented Generation" },
+      { "icon": "fas fa-certificate", "title": "Backbase iOS Mobile Developer Certification" },
+      { "icon": "fas fa-sitemap", "title": "Software Architecture: From Developer to Architect" },
+      { "icon": "fas fa-brain", "title": "Prompt Engineering & Agentic Workflow Design" }
+    ]
+  },
+  "skills": {
+    "sectionTag": "Technical Proficiency",
+    "sectionTitle": "My Skills",
+    "technicalSkills": [
+      { "icon": "fas fa-brain", "name": "Agentic AI" },
+      { "icon": "fas fa-link", "name": "LangChain" },
+      { "icon": "fas fa-project-diagram", "name": "LangGraph" },
+      { "icon": "fas fa-database", "name": "RAG" },
+      { "icon": "fas fa-vector-square", "name": "Vector Databases" },
+      { "icon": "fas fa-robot", "name": "Multi-Agent Systems" },
+      { "icon": "fab fa-python", "name": "Python" },
+      { "icon": "fas fa-terminal", "name": "Prompt Engineering" },
+      { "icon": "fas fa-cogs", "name": "CrewAI" },
+      { "icon": "fas fa-fire", "name": "OpenAI / GPT APIs" },
+      { "icon": "fas fa-face-smile", "name": "HuggingFace" },
+      { "icon": "fas fa-microchip", "name": "SLMs" },
+      { "icon": "fas fa-cloud-meatball", "name": "Azure AI Foundry" },
+      { "icon": "fas fa-thumbtack", "name": "Pinecone" },
+      { "icon": "fas fa-palette", "name": "ChromaDB" },
+      { "icon": "fas fa-bolt", "name": "FastAPI" },
+      { "icon": "fas fa-chart-line", "name": "Streamlit" },
+      { "icon": "fab fa-swift", "name": "Swift" },
+      { "icon": "fas fa-mobile-alt", "name": "SwiftUI" },
+      { "icon": "fas fa-sync-alt", "name": "RxSwift / Combine" },
+      { "icon": "fas fa-layer-group", "name": "Clean Architecture" },
+      { "icon": "fas fa-university", "name": "Backbase" },
+      { "icon": "fas fa-infinity", "name": "CI / CD" },
+      { "icon": "fas fa-cloud", "name": "Azure / AWS" },
+      { "icon": "fab fa-docker", "name": "Docker" },
+      { "icon": "fab fa-git-alt", "name": "Git" },
+      { "icon": "fas fa-running", "name": "Agile / Scrum" },
+      { "icon": "fab fa-react", "name": "React" }
+    ],
+    "industries": {
+      "sectionTag": "Domain Knowledge",
+      "sectionTitle": "Industries",
+      "items": [
+        { "icon": "fas fa-robot", "name": "Agentic AI" },
+        { "icon": "fas fa-coins", "name": "FinTech" },
+        { "icon": "fas fa-landmark", "name": "Banking" },
+        { "icon": "fas fa-heartbeat", "name": "Healthcare" },
+        { "icon": "fas fa-shopping-cart", "name": "Ecommerce" },
+        { "icon": "fas fa-network-wired", "name": "IoT" },
+        { "icon": "fas fa-building", "name": "Real Estate" },
+        { "icon": "fas fa-utensils", "name": "Food & Travel" }
+      ]
+    }
+  },
+  "experience": {
+    "sectionTag": "Career Journey",
+    "sectionTitle": "Experience",
+    "timeline": [
+      {
+        "period": "2021 — Present",
+        "title": "Engineering Manager / Agentic AI Lead",
+        "company": "Hexaware",
+        "responsibilities": [
+          "Leading a team building agentic AI products using LangChain, LangGraph, and RAG pipelines.",
+          "Designed multi-agent systems for document processing and customer support automation.",
+          "Set up vector search infrastructure (Pinecone, ChromaDB) for enterprise knowledge bases.",
+          "Still own the iOS architecture for our mobile banking clients — old habits die hard.",
+          "Mentoring engineers on LLM/SLM integration patterns and prompt engineering best practices."
+        ]
+      },
+      {
+        "period": "2019 — 2021",
+        "title": "Senior Software Engineer",
+        "company": "OpenXcell",
+        "responsibilities": [
+          "Owned end-to-end iOS development for healthcare and e-commerce clients.",
+          "Introduced SwiftUI early on — one of the first teams at the company to use it in production.",
+          "Handled everything from API integration to App Store deployment and release management."
+        ]
+      },
+      {
+        "period": "2016 — 2019",
+        "title": "Software Engineer",
+        "company": "TatvaSoft",
+        "responsibilities": [
+          "Worked across food delivery, real estate, and IoT projects. Learned MVVM the hard way.",
+          "Transitioned from Objective-C to Swift and helped the team adopt modern iOS patterns.",
+          "Got really into unit testing and code architecture during this period."
+        ]
+      },
+      {
+        "period": "2012 — 2016",
+        "title": "Software Engineer",
+        "company": "Softweb Solutions",
+        "responsibilities": [
+          "Where it all started — built my first real iOS apps with Objective-C.",
+          "Built iOS apps for banking clients using early mobile frameworks and MVC architecture.",
+          "Learned the fundamentals of shipping production apps and working with cross-functional teams."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "sectionTag": "Portfolio",
+    "sectionTitle": "My Work",
+    "sectionDescription": "A mix of what I've shipped — from banking apps that handle real money to agentic AI systems that handle real conversations. Each one taught me something different.",
+    "items": [
+      {
+        "image": "images/project-web-2.png",
+        "category": "Web App",
+        "title": "Interior by Sagar Davda",
+        "description": "Portfolio website for an interior designer featuring project galleries, service details, and client testimonials.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "lightboxTitle": "Interior by Sagar Davda"
+      },
+      {
+        "image": "images/project-web-1.png",
+        "category": "Web App",
+        "title": "RichLeaff - Food & Beverages",
+        "description": "A modern food & beverages brand website with smooth animations, menu showcase, and responsive design.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "lightboxTitle": "RichLeaff - Food & Beverages"
+      },
+      {
+        "image": "images/project-7.jpg",
+        "category": "Mobile App",
+        "title": "Bank Of Kuwait Country - Backbase",
+        "description": "Retail banking app built on Backbase platform with account management, payments, transfers, and card controls for Kuwait's banking customers.",
+        "tags": ["Backbase", "Retail Banking", "SwiftUI", "Combine", "Clean Architecture", "CI/CD"],
+        "lightboxTitle": "Bank Of Kuwait Country - Backbase"
+      },
+      {
+        "image": "images/project-8.jpg",
+        "category": "Mobile App",
+        "title": "Bank of Riyadh - Backbase",
+        "description": "Business banking iOS app for Bank of Riyadh with corporate account management, bulk payments, and approval workflows.",
+        "tags": ["Backbase", "Business Banking", "Swift", "RxSwift", "Azure DevOps"],
+        "lightboxTitle": "Bank of Riyadh - Backbase"
+      },
+      {
+        "image": "images/project-9.jpg",
+        "category": "Mobile App",
+        "title": "Bank Of Mauritius - Backbase",
+        "description": "Retail banking app for Bank of Mauritius featuring fund transfers, bill payments, account insights, and biometric authentication.",
+        "tags": ["Backbase", "Retail Banking", "Swift", "Combine", "CI/CD"],
+        "lightboxTitle": "Bank Of Mauritius - Backbase"
+      },
+      {
+        "image": "images/project-10.jpg",
+        "category": "Mobile App",
+        "title": "Bank Of Jordan - Backbase",
+        "description": "Retail banking iOS application for Bank of Jordan with multi-currency support, P2P transfers, and push notification alerts.",
+        "tags": ["Swift", "Clean Architecture", "Retail Banking", "RxSwift"],
+        "lightboxTitle": "Bank Of Jordan - Backbase"
+      },
+      {
+        "image": "images/project-4.jpg",
+        "category": "Mobile App",
+        "title": "Struqture - Project Management",
+        "description": "Construction project management app with task tracking, team collaboration, document sharing, and real-time progress dashboards.",
+        "tags": ["Swift", "MVVM", "XCTest", "GraphQL"],
+        "lightboxTitle": "Struqture - Project Management"
+      },
+      {
+        "image": "images/project-5.jpg",
+        "category": "Mobile App",
+        "title": "ClickMall - Ecommerce",
+        "description": "Full-featured e-commerce iOS app with product catalog, cart management, payment integration, and order tracking.",
+        "tags": ["Swift", "MVVM", "Azure DevOps"],
+        "lightboxTitle": "ClickMall - Ecommerce"
+      },
+      {
+        "image": "images/project-1.jpg",
+        "category": "Mobile App",
+        "title": "Waspito - Healthcare",
+        "description": "Telemedicine app connecting patients with doctors via video/audio consultations, appointment booking, and prescription management.",
+        "tags": ["Swift", "Video/Audio", "MVVM", "Azure DevOps"],
+        "lightboxTitle": "Waspito - Healthcare"
+      },
+      {
+        "image": "images/project-6.jpg",
+        "category": "Mobile App",
+        "title": "FairDeal - Service Provider",
+        "description": "On-demand service marketplace app with provider profiles, booking system, video consultations, and rating/review system.",
+        "tags": ["Swift", "MVVM", "Video Call", "Jenkins"],
+        "lightboxTitle": "FairDeal - Service Provider"
+      },
+      {
+        "image": "images/project-3.jpg",
+        "category": "Mobile App",
+        "title": "FoodCourt - Online Food Delivery",
+        "description": "Food delivery iOS app with restaurant listings, real-time order tracking, payment gateway, and push notifications.",
+        "tags": ["Swift", "MVVM", "Azure DevOps"],
+        "lightboxTitle": "FoodCourt - Online Food Delivery"
+      }
+    ]
+  },
+  "blog": {
+    "sectionTag": "Insights & Learnings",
+    "sectionTitle": "Blog",
+    "sectionDescription": "I write about what I'm building and learning — from agentic AI patterns to mobile architecture lessons.",
+    "posts": [
+      {
+        "url": "./blog/building-simple-rag.html",
+        "image": "./images/blog-rag.jpg",
+        "category": "Agentic AI",
+        "date": "Feb 16, 2026",
+        "readTime": "8 min read",
+        "title": "Building Simple RAG",
+        "excerpt": "A practical guide to building a Retrieval-Augmented Generation pipeline from scratch — embedding documents, storing vectors, and querying with LLMs for accurate, grounded answers."
+      },
+      {
+        "url": "./blog/huggingface-local-pipeline.html",
+        "image": "./images/blog-hf.jpg",
+        "category": "HuggingFace",
+        "date": "Feb 16, 2026",
+        "readTime": "7 min read",
+        "title": "Download & Run HuggingFace Models Locally",
+        "excerpt": "Step-by-step guide to downloading HuggingFace models to your machine and running them locally using the Transformers pipeline — no API keys, no cloud, fully offline."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTag": "Get In Touch",
+    "sectionTitle": "Contact Me",
+    "sectionDescription": "Got an Agentic AI project you're thinking about? Or need someone who can build both the agent and the app? Drop me a line — I'm always up for interesting conversations.",
+    "cards": [
+      {
+        "icon": "fas fa-map-marker-alt",
+        "title": "Location",
+        "text": "Ahmedabad, India",
+        "link": "https://maps.app.goo.gl/HpEwoEkHhgh8pNo98"
+      },
+      {
+        "icon": "fas fa-phone-alt",
+        "title": "Phone",
+        "text": "+91 84601 77769",
+        "link": "tel:+918460177769"
+      },
+      {
+        "icon": "fas fa-envelope",
+        "title": "Email",
+        "text": "shah.diken@gmail.com",
+        "link": "mailto:shah.diken@gmail.com"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Building something with Agentic AI?",
+    "subheading": "Whether it's an agentic workflow, a RAG pipeline, or a mobile app — let's talk.",
+    "actions": [
+      {
+        "text": "Get In Touch",
+        "href": "mailto:shah.diken@gmail.com",
+        "icon": "fas fa-envelope",
+        "type": "light"
+      },
+      {
+        "text": "Download CV",
+        "href": "./resource/DikenShahCV.pdf",
+        "icon": "fas fa-download",
+        "type": "outline",
+        "download": "Diken-Shah-CV.pdf"
+      }
+    ]
+  },
+  "footer": {
+    "brandName": "Diken Shah",
+    "description": "13+ years of building software — from native iOS apps to agentic AI systems. Currently deep into LangChain, LangGraph, and RAG. Always looking for the next interesting problem to solve.",
+    "quickLinks": [
+      { "label": "Home", "href": "#home-section" },
+      { "label": "About Me", "href": "#about-section" },
+      { "label": "Expertise", "href": "#services-section" },
+      { "label": "Skills", "href": "#skills-section" },
+      { "label": "Experience", "href": "#resume-section" },
+      { "label": "Projects", "href": "#projects-section" },
+      { "label": "Blog", "href": "#blog-section" },
+      { "label": "Contact", "href": "#contact-section" }
+    ],
+    "services": [
+      { "label": "Agentic AI Solutions", "href": "#services-section" },
+      { "label": "LangChain / LangGraph", "href": "#services-section" },
+      { "label": "RAG Pipelines", "href": "#services-section" },
+      { "label": "iOS App Development", "href": "#services-section" },
+      { "label": "Mobile Architecture", "href": "#services-section" },
+      { "label": "Engineering Leadership", "href": "#services-section" }
+    ],
+    "copyright": "Diken Shah. All rights reserved.",
+    "credit": "Designed & Developed with ❤️ by Diken Shah"
+  }
+}

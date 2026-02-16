@@ -927,6 +927,7 @@
 	<script src="js/aos.js" defer></script>
 	<script src="js/jquery.animateNumber.min.js" defer></script>
 	<script src="js/main.js" defer></script>
+	<script src="js/content-loader.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
 		integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -936,6 +937,14 @@
 			if ('scrollRestoration' in history) {
 				history.scrollRestoration = 'manual';
 			}
+			
+			// Load content from JSON and refresh AOS
+			loadContent().then(function() {
+				// Re-initialize AOS after content is loaded
+				if (typeof AOS !== 'undefined') {
+					AOS.refresh();
+				}
+			});
 		};
 		// Back to Top button
 		window.addEventListener('scroll', function() {
