@@ -32,25 +32,48 @@
 	<!-- Favicon -->
 	<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
+	<!-- Preconnect to external domains for faster resource loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+	<!-- Optimized Google Fonts with font-display swap -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+	<!-- Font Awesome - load asynchronously as it's not critical -->
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
 		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css"
+	<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+	<!-- Lightbox CSS - load asynchronously -->
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
 		integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-
+	<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css"></noscript>
+	<!-- Critical CSS - load synchronously -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Non-critical CSS - load asynchronously -->
+	<link rel="preload" href="css/open-iconic-bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="css/icomoon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/ionicons.min.css">
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/flaticon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/flaticon.css">
+	</noscript>
 
 	<!-- JSON-LD Structured Data -->
 	<script type="application/ld+json">
@@ -164,7 +187,13 @@
 				<div class="col-lg-5 order-lg-1 order-1 mb-4 mb-lg-0">
 					<div class="hero-image-wrapper" data-aos="fade-right">
 						<div class="hero-image-ring"></div>
-						<img class="hero-img" src="./images/diken_shah_optimized.jpg" alt="Diken Shah profile photo" width="300" height="300" fetchpriority="high">
+						<img class="hero-img" 
+							src="./images/diken_shah_optimized.jpg" 
+							alt="Diken Shah profile photo" 
+							width="300" 
+							height="300" 
+							fetchpriority="high"
+							decoding="async">
 						<div class="hero-image-dots"></div>
 					</div>
 				</div>
@@ -472,25 +501,7 @@
 			<div class="projects-grid">
 				<div class="project-card" data-aos="fade-up" data-aos-delay="100">
 					<div class="project-image" style="background-image: url(images/project-web-1.png);">
-						<a href="./images/project-web-1.png" data-lightbox="projects" data-title="RichLeaff - Food & Beverages">
-							<div class="project-overlay">
-								<i class="fas fa-expand"></i>
-							</div>
-						</a>
-					</div>
-					<div class="project-info">
-						<span class="project-category">Web App</span>
-						<h3>RichLeaff - Food & Beverages</h3>
-						<p class="project-desc">A modern food & beverages brand website with smooth animations, menu showcase, and responsive design.</p>
-						<div class="project-tags">
-							<span>HTML</span><span>CSS</span><span>JavaScript</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card" data-aos="fade-up" data-aos-delay="150">
-					<div class="project-image" style="background-image: url(images/project-web-2.png);">
-						<a href="./images/project-web-2.png" data-lightbox="projects" data-title="Interior by Sagar Davda">
+						<a href="./images/project-web-1.png" data-lightbox="projects" data-title="Interior by Sagar Davda">
 							<div class="project-overlay">
 								<i class="fas fa-expand"></i>
 							</div>
@@ -500,6 +511,24 @@
 						<span class="project-category">Web App</span>
 						<h3>Interior by Sagar Davda</h3>
 						<p class="project-desc">Portfolio website for an interior designer featuring project galleries, service details, and client testimonials.</p>
+						<div class="project-tags">
+							<span>HTML</span><span>CSS</span><span>JavaScript</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card" data-aos="fade-up" data-aos-delay="150">
+					<div class="project-image" style="background-image: url(images/project-web-2.png);">
+						<a href="./images/project-web-2.png" data-lightbox="projects" data-title="RichLeaff - Food & Beverages">
+							<div class="project-overlay">
+								<i class="fas fa-expand"></i>
+							</div>
+						</a>
+					</div>
+					<div class="project-info">
+						<span class="project-category">Web App</span>
+						<h3>RichLeaff - Food & Beverages</h3>
+						<p class="project-desc">A modern food & beverages brand website with smooth animations, menu showcase, and responsive design.</p>
 						<div class="project-tags">
 							<span>HTML</span><span>CSS</span><span>JavaScript</span>
 						</div>
@@ -685,7 +714,12 @@
 					<a href="./blog/building-simple-rag.html" class="blog-card-link">
 						<div class="blog-card">
 							<div class="blog-card-image">
-								<img src="./images/blog-rag.jpg" alt="Building Simple RAG" loading="lazy"
+							<img src="./images/blog-rag.jpg" 
+								alt="Building Simple RAG" 
+								loading="lazy"
+								decoding="async"
+								width="600" 
+								height="400"
 									onerror="this.style.display='none'; this.parentElement.classList.add('blog-card-image-fallback');">
 								<span class="blog-card-category">Agentic AI</span>
 							</div>
@@ -707,7 +741,12 @@
 					<a href="./blog/huggingface-local-pipeline.html" class="blog-card-link">
 						<div class="blog-card">
 							<div class="blog-card-image">
-								<img src="./images/blog-hf.jpg" alt="HuggingFace Local Pipeline" loading="lazy"
+							<img src="./images/blog-hf.jpg" 
+								alt="HuggingFace Local Pipeline" 
+								loading="lazy"
+								decoding="async"
+								width="600" 
+								height="400"
 									onerror="this.style.display='none'; this.parentElement.classList.add('blog-card-image-fallback');">
 								<span class="blog-card-category">HuggingFace</span>
 							</div>
