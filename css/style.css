@@ -12431,6 +12431,12 @@ h1, h2, h3, h4, h5,
   .hero-actions {
     justify-content: center;
   }
+  .hero-tech-strip {
+    justify-content: center;
+  }
+  .hero {
+    padding-bottom: 3rem;
+  }
 }
 
 /* ====================================================================
