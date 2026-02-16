@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Download & Run HuggingFace Models Locally — Diken Shah</title>
+	<meta name="description"
+		content="Step-by-step guide to downloading HuggingFace models to your machine and running them locally using the Transformers pipeline — no API keys, no cloud, fully offline.">
+	<meta name="author" content="Diken Shah">
+	<link rel="canonical" href="https://iamdikenshah.github.io/blog/huggingface-local-pipeline.html">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Download & Run HuggingFace Models Locally — Diken Shah">
+	<meta property="og:description" content="Step-by-step guide to downloading HuggingFace models and running them locally with the Transformers pipeline.">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://iamdikenshah.github.io/blog/huggingface-local-pipeline.html">
+
+	<!-- Favicon -->
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/aos.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="../index.html"><span class="brand-highlight">D</span>iken</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="../index.html#services-section" class="nav-link"><span>Expertise</span></a></li>
+					<li class="nav-item"><a href="../index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+					<li class="nav-item"><a href="../index.html#resume-section" class="nav-link"><span>Experience</span></a></li>
+					<li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="../index.html#blog-section" class="nav-link"><span>Blog</span></a></li>
+					<li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Blog Post -->
+	<main>
+		<article class="blog-post-page">
+			<!-- Blog Header -->
+			<div class="blog-post-header">
+				<div class="container">
+					<a href="../index.html#blog-section" class="blog-back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+					<div class="blog-post-meta-top">
+						<span class="blog-post-category">HuggingFace</span>
+						<span class="blog-post-date"><i class="fas fa-calendar-alt"></i> February 16, 2026</span>
+						<span class="blog-post-reading-time"><i class="fas fa-clock"></i> 7 min read</span>
+					</div>
+					<h1 class="blog-post-title">Download & Run HuggingFace Models Locally</h1>
+					<p class="blog-post-subtitle">No API keys, no cloud dependency, fully offline — download any HuggingFace model to your machine and run inference using the Transformers pipeline in a few lines of Python.</p>
+				</div>
+			</div>
+
+			<!-- Blog Content -->
+			<div class="blog-post-content">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8">
+
+							<h2>Why Run Models Locally?</h2>
+							<p>Cloud APIs are convenient, but there are solid reasons to run models on your own machine:</p>
+							<ul>
+								<li><strong>Privacy</strong> — your data never leaves your device. Critical for sensitive documents, healthcare, or legal use cases.</li>
+								<li><strong>Cost</strong> — no per-token charges. Once downloaded, you can run inference as many times as you want for free.</li>
+								<li><strong>Offline access</strong> — works without internet after the initial download.</li>
+								<li><strong>Customization</strong> — full control over model configuration, quantization, and fine-tuning.</li>
+							</ul>
+							<p>HuggingFace's <code>transformers</code> library makes this remarkably simple with its <code>pipeline</code> API.</p>
+
+							<h2>Prerequisites</h2>
+							<p>Before starting, make sure you have Python 3.8+ installed. Then install the required packages:</p>
+
+							<pre><code>pip install transformers torch</code></pre>
+
+							<p>If you're on a Mac with Apple Silicon, PyTorch will automatically use the MPS (Metal Performance Shaders) backend for GPU acceleration. On Linux/Windows with an NVIDIA GPU, install the CUDA version of PyTorch for best performance.</p>
+
+							<p>Optionally, install <code>accelerate</code> for better memory management with large models:</p>
+
+							<pre><code>pip install accelerate</code></pre>
+
+							<h2>Step 1: Pick a Model</h2>
+							<p>Head to <a href="https://huggingface.co/models" target="_blank" rel="noopener noreferrer">huggingface.co/models</a> and browse. For this guide, we'll use a few practical examples:</p>
+
+							<ul>
+								<li><strong>Text generation:</strong> <code>microsoft/DialoGPT-medium</code> or <code>TinyLlama/TinyLlama-1.1B-Chat-v1.0</code></li>
+								<li><strong>Sentiment analysis:</strong> <code>distilbert-base-uncased-finetuned-sst-2-english</code></li>
+								<li><strong>Summarization:</strong> <code>facebook/bart-large-cnn</code></li>
+								<li><strong>Embeddings:</strong> <code>sentence-transformers/all-MiniLM-L6-v2</code></li>
+							</ul>
+
+							<p>The model ID is just the <code>org/model-name</code> you see on the HuggingFace page.</p>
+
+							<h2>Step 2: Download & Run with Pipeline</h2>
+							<p>The <code>pipeline</code> function is the easiest way to use any model. It handles tokenization, inference, and post-processing in one call.</p>
+
+							<h3>Text Classification (Sentiment Analysis)</h3>
+							<pre><code>from transformers import pipeline
+
+# First run downloads the model (~260MB)
+# Subsequent runs load from cache
+classifier = pipeline("sentiment-analysis",
+                       model="distilbert-base-uncased-finetuned-sst-2-english")
+
+result = classifier("I love building AI applications!")
+print(result)
+# [{'label': 'POSITIVE', 'score': 0.9998}]</code></pre>
+
+							<p>That's it. One line to load, one line to run. The model is automatically downloaded to <code>~/.cache/huggingface/hub/</code> on your machine.</p>
+
+							<h3>Text Generation</h3>
+							<pre><code>from transformers import pipeline
+
+generator = pipeline("text-generation",
+                     model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+                     torch_dtype="auto")
+
+messages = [
+    {"role": "system", "content": "You are a helpful AI assistant."},
+    {"role": "user", "content": "Explain RAG in 2 sentences."}
+]
+
+output = generator(messages, max_new_tokens=100, do_sample=True,
+                   temperature=0.7)
+print(output[0]["generated_text"][-1]["content"])</code></pre>
+
+							<h3>Summarization</h3>
+							<pre><code>from transformers import pipeline
+
+summarizer = pipeline("summarization",
+                      model="facebook/bart-large-cnn")
+
+article = """
+Retrieval-Augmented Generation (RAG) is a technique that combines
+information retrieval with text generation. It works by first searching
+a knowledge base for relevant documents, then passing those documents
+as context to a language model. This allows the model to generate
+responses grounded in factual, up-to-date information rather than
+relying solely on its training data.
+"""
+
+summary = summarizer(article, max_length=50, min_length=20)
+print(summary[0]["summary_text"])</code></pre>
+
+							<h2>Step 3: Save Models to a Custom Directory</h2>
+							<p>By default, models are cached in <code>~/.cache/huggingface/</code>. To save them to a specific folder (useful for deployment or sharing):</p>
+
+							<pre><code>from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+model_name = "distilbert-base-uncased-finetuned-sst-2-english"
+save_path = "./models/sentiment"
+
+# Download and save
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+tokenizer.save_pretrained(save_path)
+model.save_pretrained(save_path)
+
+print(f"Model saved to {save_path}")</code></pre>
+
+							<p>Later, load it from the local path — no internet required:</p>
+
+							<pre><code>from transformers import pipeline
+
+# Load from local directory
+classifier = pipeline("sentiment-analysis",
+                       model="./models/sentiment")
+
+result = classifier("Running models locally is amazing!")
+print(result)</code></pre>
+
+							<h2>Step 4: Using GPU Acceleration</h2>
+							<p>To run inference on GPU (much faster for larger models):</p>
+
+							<pre><code>from transformers import pipeline
+
+# NVIDIA GPU
+classifier = pipeline("sentiment-analysis",
+                       model="distilbert-base-uncased-finetuned-sst-2-english",
+                       device=0)  # Uses first CUDA GPU
+
+# Apple Silicon (M1/M2/M3)
+classifier = pipeline("sentiment-analysis",
+                       model="distilbert-base-uncased-finetuned-sst-2-english",
+                       device="mps")
+
+# Auto-detect best device
+import torch
+device = 0 if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else -1)
+classifier = pipeline("sentiment-analysis",
+                       model="distilbert-base-uncased-finetuned-sst-2-english",
+                       device=device)</code></pre>
+
+							<h2>Practical Tips</h2>
+							<ul>
+								<li><strong>Start small.</strong> Models like <code>distilbert</code> and <code>TinyLlama-1.1B</code> run fine on a laptop with 8GB RAM. Don't jump to 7B+ parameter models unless you have 16GB+ RAM or a GPU.</li>
+								<li><strong>Use quantization for large models.</strong> 4-bit quantization via <code>bitsandbytes</code> can cut memory usage by 75%:
+									<pre><code>from transformers import BitsAndBytesConfig
+
+bnb_config = BitsAndBytesConfig(load_in_4bit=True)
+generator = pipeline("text-generation",
+                     model="mistralai/Mistral-7B-Instruct-v0.2",
+                     model_kwargs={"quantization_config": bnb_config})</code></pre>
+								</li>
+								<li><strong>Check model size before downloading.</strong> The model card on HuggingFace shows the download size. A 7B parameter model in fp16 is ~14GB.</li>
+								<li><strong>Use <code>pipeline</code> for quick tasks</strong>, and <code>AutoModel</code> + <code>AutoTokenizer</code> when you need more control over tokenization, batching, or output processing.</li>
+								<li><strong>Batch your inputs</strong> for better throughput:
+									<pre><code>results = classifier([
+    "This product is great!",
+    "Terrible experience.",
+    "It was okay, nothing special."
+])</code></pre>
+								</li>
+							</ul>
+
+							<h2>Available Pipeline Tasks</h2>
+							<p>The <code>pipeline</code> function supports many tasks out of the box:</p>
+							<ul>
+								<li><code>text-generation</code> — generate text or chat responses</li>
+								<li><code>text-classification</code> / <code>sentiment-analysis</code> — classify text</li>
+								<li><code>summarization</code> — condense long text</li>
+								<li><code>translation_xx_to_yy</code> — translate between languages</li>
+								<li><code>question-answering</code> — extract answers from a context</li>
+								<li><code>fill-mask</code> — predict masked words</li>
+								<li><code>zero-shot-classification</code> — classify without training</li>
+								<li><code>feature-extraction</code> — generate embeddings</li>
+								<li><code>image-classification</code> — classify images</li>
+								<li><code>automatic-speech-recognition</code> — transcribe audio</li>
+							</ul>
+
+							<h2>What's Next?</h2>
+							<p>Once you're comfortable running models locally, the next steps are:</p>
+							<ul>
+								<li><strong>Fine-tuning</strong> — adapt a pre-trained model to your specific domain using your own data.</li>
+								<li><strong>Serving locally</strong> — wrap your model in a FastAPI endpoint for local API access.</li>
+								<li><strong>Integrating with RAG</strong> — use local embeddings + a local LLM for a fully offline RAG pipeline.</li>
+								<li><strong>Using GGUF models with llama.cpp</strong> — for even more efficient local inference.</li>
+							</ul>
+							<p>Running models locally is one of the most empowering things you can do as an AI engineer. Full control, zero cost, total privacy. If you want to discuss local model setups, <a href="../index.html#contact-section">reach out</a>.</p>
+
+							<!-- Author Card -->
+							<div class="blog-author-card">
+								<img src="../images/diken_shah.PNG" alt="Diken Shah" class="blog-author-img" loading="lazy">
+								<div class="blog-author-info">
+									<h4>Diken Shah</h4>
+									<p>Agentic AI Engineer & Mobile Architect with 13+ years of experience. Currently building agentic workflows with LangChain, LangGraph, and RAG.</p>
+									<div class="blog-author-social">
+										<a href="https://github.com/iamdikenshah" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+										<a href="https://www.linkedin.com/in/diken-shah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+										<a href="https://x.com/Diken_Shah" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- Footer -->
+	<footer class="modern-footer">
+		<div class="container">
+			<div class="footer-bottom">
+				<p>&copy; <script>document.write(new Date().getFullYear());</script> Diken Shah. All rights reserved.</p>
+				<p class="footer-credit">Designed & Developed with <i class="fas fa-heart footer-heart"></i> by Diken Shah</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Back to Top Button -->
+	<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+
+	<script src="../js/jquery.min.js" defer></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js" defer></script>
+	<script src="../js/popper.min.js" defer></script>
+	<script src="../js/bootstrap.min.js" defer></script>
+	<script src="../js/jquery.easing.1.3.js" defer></script>
+	<script src="../js/jquery.waypoints.min.js" defer></script>
+	<script src="../js/aos.js" defer></script>
+	<script src="../js/main.js" defer></script>
+	<script>
+		window.addEventListener('scroll', function() {
+			var btn = document.getElementById('backToTop');
+			if (window.scrollY > 500) {
+				btn.classList.add('show');
+			} else {
+				btn.classList.remove('show');
+			}
+		});
+	</script>
+</body>
+
+</html>
