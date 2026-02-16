@@ -10,16 +10,6 @@ AOS.init({
 
 	"use strict";
 
-	// Parallax
-	$(window).stellar({
-		responsive: true,
-		parallaxBackgrounds: true,
-		parallaxElements: true,
-		horizontalScrolling: false,
-		hideDistantElements: false,
-		scrollProperty: 'scroll'
-	});
-
 	// Loader - hide after page load
 	var loader = function () {
 		setTimeout(function () {
@@ -29,9 +19,6 @@ AOS.init({
 		}, 1);
 	};
 	loader();
-
-	// Scrollax
-	$.Scrollax();
 
 	// Burger Menu Toggle
 	$('body').on('click', '.js-fh5co-nav-toggle', function (event) {
