@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iamdikenshah.github.io/sitemap.xml
