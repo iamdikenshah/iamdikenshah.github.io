@@ -13163,7 +13163,9 @@ h1, h2, h3, h4, h5,
    BLOG SECTION — Index Cards
    ==================================================================== */
 .blog-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
   border-radius: var(--radius-lg);
@@ -13200,8 +13202,17 @@ h1, h2, h3, h4, h5,
   color: rgba(255,255,255,0.5);
 }
 
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .blog-card-body {
   padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .blog-card-meta {
@@ -13246,6 +13257,7 @@ h1, h2, h3, h4, h5,
   font-size: 0.95rem;
   line-height: 1.65;
   margin-bottom: 1rem;
+  flex: 1;
 }
 
 .blog-card-read-more {
