@@ -13859,7 +13859,7 @@ h1, h2, h3, h4, h5,
 .back-to-top {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
