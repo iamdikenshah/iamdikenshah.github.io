@@ -373,6 +373,48 @@ class AIChatbot {
       return "Diken holds certifications in Azure AI Fundamentals, HuggingFace NLP, Deep Learning Specialization, and is a Microsoft Certified Professional. He continuously upskills in AI and mobile technologies.";
     } else if (lowerMsg.includes("skill")) {
       return "Diken's core skills include: Agentic AI (LangChain, LangGraph, CrewAI), RAG pipelines, iOS development (Swift, SwiftUI), Python, mobile architecture, vector databases, and multi-agent systems. He bridges AI and mobile engineering!";
+    } else if (lowerMsg.includes("blog") || lowerMsg.includes("article") || lowerMsg.includes("post") || lowerMsg.includes("read") || lowerMsg.includes("writing")) {
+      const blogs = [
+        {
+          title: "Building a Simple RAG System",
+          desc: "A practical guide to building Retrieval-Augmented Generation pipelines from scratch.",
+          tag: "AI / RAG",
+          time: "8 min read",
+          url: "./blog/building-simple-rag.html"
+        },
+        {
+          title: "HuggingFace Local Pipeline",
+          desc: "Run powerful NLP models locally using HuggingFace pipelines — zero API cost.",
+          tag: "AI / NLP",
+          time: "6 min read",
+          url: "./blog/huggingface-local-pipeline.html"
+        },
+        {
+          title: "Clean Architecture in iOS",
+          desc: "How to structure scalable iOS apps using Clean Architecture with Swift examples.",
+          tag: "iOS Development",
+          time: "12 min read",
+          url: "./blog/clean-architecture-ios.html"
+        },
+        {
+          title: "iOS Interview Q&A",
+          desc: "30 iOS interview questions across beginner, intermediate and advanced levels.",
+          tag: "iOS Development",
+          time: "20 min read",
+          url: "./blog/ios-interview-questions.html"
+        }
+      ];
+
+      const cards = blogs.map(b => `
+        <a href="${b.url}" target="_blank" style="display:block;text-decoration:none;color:inherit;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='#edf2f7'" onmouseout="this.style.background='#f8fafc'">
+          <div style="font-size:11px;color:#f97316;font-weight:600;margin-bottom:4px;">${b.tag} · ${b.time}</div>
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px;">${b.title}</div>
+          <div style="font-size:12px;color:#64748b;line-height:1.5;">${b.desc}</div>
+          <div style="font-size:12px;color:#f97316;margin-top:6px;font-weight:600;">Read →</div>
+        </a>
+      `).join("");
+
+      return `Here are Diken's latest blog articles:<br>${cards}`;
     } else {
       return "That's a great question! I'm an AI assistant trained on Diken's portfolio. You can ask me about his experience, skills, projects, certifications, or how to contact him. What would you like to know?";
     }
