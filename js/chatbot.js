@@ -11,6 +11,8 @@ class AIChatbot {
     this.messages = [];
     this.isTyping = false;
     this.sessionId = this.generateSessionId();
+    this.touchStartY = 0; // For touch scroll handling
+    this.savedScrollY = 0; // For restoring scroll position
 
     // Quick suggestions
     this.suggestions = [
@@ -112,6 +114,7 @@ class AIChatbot {
     const chatContainer = document.getElementById("chatContainer");
     const chatInput = document.getElementById("chatInput");
     const chatSend = document.getElementById("chatSend");
+    const chatMessages = document.getElementById("chatMessages");
 
     // Toggle chat
     chatButton.addEventListener("click", () => this.toggleChat());
@@ -125,6 +128,33 @@ class AIChatbot {
         this.handleSendMessage();
       }
     });
+
+    // Prevent touch events from propagating to main page when scrolling chat
+    chatMessages.addEventListener("touchstart", (e) => {
+      this.touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    chatMessages.addEventListener("touchmove", (e) => {
+      const scrollTop = chatMessages.scrollTop;
+      const scrollHeight = chatMessages.scrollHeight;
+      const clientHeight = chatMessages.clientHeight;
+      const touchY = e.touches[0].clientY;
+      const isScrollingUp = touchY > this.touchStartY;
+      const isScrollingDown = touchY < this.touchStartY;
+
+      // At top and trying to scroll up, or at bottom and trying to scroll down
+      const atTop = scrollTop === 0;
+      const atBottom = scrollTop + clientHeight >= scrollHeight - 1;
+
+      if ((atTop && isScrollingUp) || (atBottom && isScrollingDown)) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Prevent scroll chaining to main page
+    chatContainer.addEventListener("touchmove", (e) => {
+      e.stopPropagation();
+    }, { passive: true });
 
     // Close on outside click
     document.addEventListener("click", (e) => {
@@ -143,13 +173,33 @@ class AIChatbot {
     chatButton.classList.toggle("active");
     chatContainer.classList.toggle("active");
 
-    // Remove badge when opened
+    // Handle body scroll locking on mobile
+    const isMobile = window.innerWidth <= 768;
     if (chatContainer.classList.contains("active")) {
+      // Lock body scroll on mobile when chat is open
+      if (isMobile) {
+        document.body.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+        document.body.style.top = `-${window.scrollY}px`;
+        this.savedScrollY = window.scrollY;
+      }
       const badge = chatButton.querySelector(".chat-badge");
       if (badge) {
         setTimeout(() => badge.remove(), 300);
       }
       document.getElementById("chatInput").focus();
+    } else {
+      // Restore body scroll on mobile when chat is closed
+      if (isMobile) {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+        if (this.savedScrollY !== undefined) {
+          window.scrollTo(0, this.savedScrollY);
+        }
+      }
     }
   }
 

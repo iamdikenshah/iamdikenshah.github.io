@@ -182,6 +182,9 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -472,6 +475,12 @@
     right: 10px;
     left: 10px;
     margin: 0 auto;
+    touch-action: none;
+  }
+
+  .ai-chat-container .chat-messages {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 
   .ai-chat-button {
