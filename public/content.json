@@ -337,6 +337,15 @@
     "sectionDescription": "I write about what I'm building and learning — from agentic AI patterns to mobile architecture lessons.",
     "posts": [
       {
+        "url": "/blog/types-of-ai-agents",
+        "image": "/images/blog-ai-agents.jpg",
+        "category": "Agentic AI",
+        "date": "Feb 21, 2026",
+        "readTime": "18 min read",
+        "title": "Types of AI Agents",
+        "excerpt": "A comprehensive guide to every major AI agent architecture — from Simple Reflex to Multi-Agent Systems — with real code examples, a complete customer support use case, and a framework for choosing the right agent type."
+      },
+      {
         "url": "/blog/slm-vs-llm",
         "image": "/images/blog-slm-llm.jpg",
         "category": "Agentic AI",
