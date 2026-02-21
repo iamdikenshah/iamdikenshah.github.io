@@ -337,6 +337,15 @@
     "sectionDescription": "I write about what I'm building and learning — from agentic AI patterns to mobile architecture lessons.",
     "posts": [
       {
+        "url": "/blog/slm-vs-llm",
+        "image": "/images/blog-slm-llm.jpg",
+        "category": "Agentic AI",
+        "date": "Feb 21, 2026",
+        "readTime": "12 min read",
+        "title": "SLM vs LLM: Complete Guide",
+        "excerpt": "A deep-dive into Small Language Models and Large Language Models — key differences, use cases, architecture, cost tradeoffs, popular models, and how to combine both in production AI systems."
+      },
+      {
         "url": "/blog/building-simple-rag",
         "image": "/images/blog-rag.jpg",
         "category": "Agentic AI",
