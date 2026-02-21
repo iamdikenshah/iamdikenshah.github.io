@@ -1,66 +1,19 @@
 "use client";
 
 import Link from "next/link";
-
-const posts = [
-  {
-    url: "/blog/building-simple-rag",
-    image: "/images/blog-rag.jpg",
-    category: "Agentic AI",
-    date: "Feb 16, 2026",
-    readTime: "8 min read",
-    title: "Building Simple RAG",
-    excerpt:
-      "A practical guide to building a Retrieval-Augmented Generation pipeline from scratch — embedding documents, storing vectors, and querying with LLMs for accurate, grounded answers.",
-    delay: 100,
-  },
-  {
-    url: "/blog/huggingface-local-pipeline",
-    image: "/images/blog-hf.jpg",
-    category: "HuggingFace",
-    date: "Feb 16, 2026",
-    readTime: "7 min read",
-    title: "Download & Run HuggingFace Models Locally",
-    excerpt:
-      "Step-by-step guide to downloading HuggingFace models to your machine and running them locally using the Transformers pipeline — no API keys, no cloud, fully offline.",
-    delay: 200,
-  },
-  {
-    url: "/blog/clean-architecture-ios",
-    image: "/images/blog-clean-arch.jpg",
-    category: "iOS Development",
-    date: "Feb 18, 2026",
-    readTime: "12 min read",
-    title: "Clean Architecture in iOS",
-    excerpt:
-      "A practical deep-dive into building scalable, testable iOS apps using Clean Architecture — layers, dependency rules, SOLID principles, and real Swift code examples.",
-    delay: 300,
-  },
-  {
-    url: "/blog/ios-interview-questions",
-    image: "/images/blog-ios-interview.jpg",
-    category: "iOS Development",
-    date: "Feb 18, 2026",
-    readTime: "20 min read",
-    title: "iOS Interview Questions & Answers",
-    excerpt:
-      "30 essential iOS interview questions across Beginner, Intermediate, and Advanced levels — Swift, memory management, concurrency, architecture, and performance.",
-    delay: 400,
-  },
-];
+import { blog } from "@/lib/content";
 
 export default function BlogSection() {
+  const posts = blog.posts.map((p, i) => ({ ...p, delay: 100 + i * 100 }));
+
   return (
     <section className="modern-section" id="blog-section">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <span className="section-tag">Insights &amp; Learnings</span>
-          <h2 className="section-title">Blog</h2>
+          <span className="section-tag">{blog.sectionTag}</span>
+          <h2 className="section-title">{blog.sectionTitle}</h2>
           <div className="section-line"></div>
-          <p className="section-description">
-            I write about what I&apos;m building and learning — from agentic AI patterns to mobile architecture
-            lessons.
-          </p>
+          <p className="section-description">{blog.sectionDescription}</p>
         </div>
         <div className="row" style={{ alignItems: "stretch" }}>
           {posts.map((post) => (

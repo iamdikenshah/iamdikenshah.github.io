@@ -1,123 +1,29 @@
 "use client";
 
 import { useState } from "react";
-
-const projects = [
-  {
-    image: "/images/project-web-1.png",
-    category: "Web App",
-    title: "Interior by Sagar Davda",
-    desc: "Portfolio website for an interior designer featuring project galleries, service details, and client testimonials.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://iamdikenshah.github.io/sagar_davda_interior_designer/",
-    delay: 100,
-  },
-  {
-    image: "/images/project-web-2.png",
-    category: "Web App",
-    title: "RichLeaff - Food & Beverages",
-    desc: "A modern food & beverages brand website with smooth animations, menu showcase, and responsive design.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://iamdikenshah.github.io/richleaff_website/",
-    delay: 150,
-  },
-  {
-    image: "/images/project-web-3.png",
-    category: "Web App",
-    title: "Climate Solutions",
-    desc: "Environmental awareness website showcasing climate solutions, sustainability initiatives, and eco-friendly practices.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://iamdikenshah.github.io/climate_solution_website/",
-    delay: 200,
-  },
-  {
-    image: "/images/project-7.jpg",
-    category: "Mobile App",
-    title: "Bank Of Kuwait Country - Backbase",
-    desc: "Retail banking app built on Backbase platform with account management, payments, transfers, and card controls.",
-    tags: ["Backbase", "Retail Banking", "SwiftUI", "Combine", "Clean Architecture", "CI/CD"],
-    delay: 100,
-  },
-  {
-    image: "/images/project-8.jpg",
-    category: "Mobile App",
-    title: "Bank of Riyadh - Backbase",
-    desc: "Business banking iOS app for Bank of Riyadh with corporate account management, bulk payments, and approval workflows.",
-    tags: ["Backbase", "Business Banking", "Swift", "RxSwift", "Azure DevOps"],
-    delay: 150,
-  },
-  {
-    image: "/images/project-9.jpg",
-    category: "Mobile App",
-    title: "Bank Of Mauritius - Backbase",
-    desc: "Retail banking app featuring fund transfers, bill payments, account insights, and biometric authentication.",
-    tags: ["Backbase", "Retail Banking", "Swift", "Combine", "CI/CD"],
-    delay: 200,
-  },
-  {
-    image: "/images/project-10.jpg",
-    category: "Mobile App",
-    title: "Bank Of Jordan - Backbase",
-    desc: "Retail banking iOS app with multi-currency support, P2P transfers, and push notification alerts.",
-    tags: ["Swift", "Clean Architecture", "Retail Banking", "RxSwift"],
-    delay: 100,
-  },
-  {
-    image: "/images/project-4.jpg",
-    category: "Mobile App",
-    title: "Struqture - Project Management",
-    desc: "Construction project management app with task tracking, team collaboration, document sharing, and real-time progress dashboards.",
-    tags: ["Swift", "MVVM", "XCTest", "GraphQL"],
-    delay: 150,
-  },
-  {
-    image: "/images/project-5.jpg",
-    category: "Mobile App",
-    title: "ClickMall - Ecommerce",
-    desc: "Full-featured e-commerce iOS app with product catalog, cart management, payment integration, and order tracking.",
-    tags: ["Swift", "MVVM", "Azure DevOps"],
-    delay: 200,
-  },
-  {
-    image: "/images/project-1.jpg",
-    category: "Mobile App",
-    title: "Waspito - Healthcare",
-    desc: "Telemedicine app connecting patients with doctors via video/audio consultations, appointment booking, and prescription management.",
-    tags: ["Swift", "Video/Audio", "MVVM", "Azure DevOps"],
-    delay: 100,
-  },
-  {
-    image: "/images/project-6.jpg",
-    category: "Mobile App",
-    title: "FairDeal - Service Provider",
-    desc: "On-demand service marketplace app with provider profiles, booking system, video consultations, and rating/review system.",
-    tags: ["Swift", "MVVM", "Video Call", "Jenkins"],
-    delay: 150,
-  },
-  {
-    image: "/images/project-3.jpg",
-    category: "Mobile App",
-    title: "FoodCourt - Online Food Delivery",
-    desc: "Food delivery iOS app with restaurant listings, real-time order tracking, payment gateway, and push notifications.",
-    tags: ["Swift", "MVVM", "Azure DevOps"],
-    delay: 200,
-  },
-];
+import { projects as projectsContent } from "@/lib/content";
 
 export default function ProjectsSection() {
   const [lightbox, setLightbox] = useState<string | null>(null);
+
+  const projects = projectsContent.items.map((p, i) => ({
+    image: p.image.startsWith("/") ? p.image : `/${p.image}`,
+    category: p.category,
+    title: p.title,
+    desc: p.description,
+    tags: p.tags,
+    liveUrl: "liveUrl" in p ? (p as typeof p & { liveUrl: string }).liveUrl : undefined,
+    delay: 100 + (i % 3) * 50,
+  }));
 
   return (
     <section className="modern-section section-alt" id="projects-section">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <span className="section-tag">Portfolio</span>
-          <h2 className="section-title">My Work</h2>
+          <span className="section-tag">{projectsContent.sectionTag}</span>
+          <h2 className="section-title">{projectsContent.sectionTitle}</h2>
           <div className="section-line"></div>
-          <p className="section-description">
-            A mix of what I&apos;ve shipped — from banking apps that handle real money to agentic AI systems that
-            handle real conversations. Each one taught me something different.
-          </p>
+          <p className="section-description">{projectsContent.sectionDescription}</p>
         </div>
         <div className="projects-grid">
           {projects.map((p) => (

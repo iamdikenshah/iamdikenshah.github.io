@@ -1,39 +1,16 @@
+import { contact } from "@/lib/content";
+
 export default function ContactSection() {
-  const cards = [
-    {
-      icon: "fas fa-map-marker-alt",
-      title: "Location",
-      text: "Ahmedabad, India",
-      link: "https://maps.app.goo.gl/HpEwoEkHhgh8pNo98",
-      delay: 100,
-    },
-    {
-      icon: "fas fa-phone-alt",
-      title: "Phone",
-      text: "+91 84601 77769",
-      link: "tel:+918460177769",
-      delay: 200,
-    },
-    {
-      icon: "fas fa-envelope",
-      title: "Email",
-      text: "shah.diken@gmail.com",
-      link: "mailto:shah.diken@gmail.com",
-      delay: 300,
-    },
-  ];
+  const cards = contact.cards.map((c, i) => ({ ...c, delay: 100 + i * 100 }));
 
   return (
     <section className="modern-section" id="contact-section">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <span className="section-tag">Get In Touch</span>
-          <h2 className="section-title">Contact Me</h2>
+          <span className="section-tag">{contact.sectionTag}</span>
+          <h2 className="section-title">{contact.sectionTitle}</h2>
           <div className="section-line"></div>
-          <p className="section-description">
-            Got an Agentic AI project you&apos;re thinking about? Or need someone who can build both the agent and the
-            app? Drop me a line — I&apos;m always up for interesting conversations.
-          </p>
+          <p className="section-description">{contact.sectionDescription}</p>
         </div>
         <div className="row justify-content-center">
           {cards.map((card) => (

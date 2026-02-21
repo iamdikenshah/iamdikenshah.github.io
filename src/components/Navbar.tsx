@@ -2,17 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { navigation } from "@/lib/content";
 
-const navLinks = [
-  { label: "Home", href: "/#home-section" },
-  { label: "About", href: "/#about-section" },
-  { label: "Expertise", href: "/#services-section" },
-  { label: "Skills", href: "/#skills-section" },
-  { label: "Experience", href: "/#resume-section" },
-  { label: "Projects", href: "/#projects-section" },
-  { label: "Blog", href: "/#blog-section" },
-  { label: "Contact", href: "/#contact-section" },
-];
+const navLinks = navigation.map((item) => ({
+  label: item.label,
+  href: `/${item.href}`,
+}));
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

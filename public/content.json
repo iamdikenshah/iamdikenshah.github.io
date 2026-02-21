@@ -236,6 +236,7 @@
         "title": "Interior by Sagar Davda",
         "description": "Portfolio website for an interior designer featuring project galleries, service details, and client testimonials.",
         "tags": ["HTML", "CSS", "JavaScript"],
+        "liveUrl": "https://iamdikenshah.github.io/sagar_davda_interior_designer/",
         "lightboxTitle": "Interior by Sagar Davda"
       },
       {
@@ -244,7 +245,17 @@
         "title": "RichLeaff - Food & Beverages",
         "description": "A modern food & beverages brand website with smooth animations, menu showcase, and responsive design.",
         "tags": ["HTML", "CSS", "JavaScript"],
+        "liveUrl": "https://iamdikenshah.github.io/richleaff_website/",
         "lightboxTitle": "RichLeaff - Food & Beverages"
+      },
+      {
+        "image": "images/project-web-3.png",
+        "category": "Web App",
+        "title": "Climate Solutions",
+        "description": "Environmental awareness website showcasing climate solutions, sustainability initiatives, and eco-friendly practices.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "liveUrl": "https://iamdikenshah.github.io/climate_solution_website/",
+        "lightboxTitle": "Climate Solutions"
       },
       {
         "image": "images/project-7.jpg",
@@ -326,8 +337,8 @@
     "sectionDescription": "I write about what I'm building and learning — from agentic AI patterns to mobile architecture lessons.",
     "posts": [
       {
-        "url": "./blog/building-simple-rag.html",
-        "image": "./images/blog-rag.jpg",
+        "url": "/blog/building-simple-rag",
+        "image": "/images/blog-rag.jpg",
         "category": "Agentic AI",
         "date": "Feb 16, 2026",
         "readTime": "8 min read",
@@ -335,13 +346,31 @@
         "excerpt": "A practical guide to building a Retrieval-Augmented Generation pipeline from scratch — embedding documents, storing vectors, and querying with LLMs for accurate, grounded answers."
       },
       {
-        "url": "./blog/huggingface-local-pipeline.html",
-        "image": "./images/blog-hf.jpg",
+        "url": "/blog/huggingface-local-pipeline",
+        "image": "/images/blog-hf.jpg",
         "category": "HuggingFace",
         "date": "Feb 16, 2026",
         "readTime": "7 min read",
         "title": "Download & Run HuggingFace Models Locally",
         "excerpt": "Step-by-step guide to downloading HuggingFace models to your machine and running them locally using the Transformers pipeline — no API keys, no cloud, fully offline."
+      },
+      {
+        "url": "/blog/clean-architecture-ios",
+        "image": "/images/blog-clean-arch.jpg",
+        "category": "iOS Development",
+        "date": "Feb 18, 2026",
+        "readTime": "12 min read",
+        "title": "Clean Architecture in iOS",
+        "excerpt": "A practical deep-dive into building scalable, testable iOS apps using Clean Architecture — layers, dependency rules, SOLID principles, and real Swift code examples."
+      },
+      {
+        "url": "/blog/ios-interview-questions",
+        "image": "/images/blog-ios-interview.jpg",
+        "category": "iOS Development",
+        "date": "Feb 18, 2026",
+        "readTime": "20 min read",
+        "title": "iOS Interview Questions & Answers",
+        "excerpt": "30 essential iOS interview questions across Beginner, Intermediate, and Advanced levels — Swift, memory management, concurrency, architecture, and performance."
       }
     ]
   },

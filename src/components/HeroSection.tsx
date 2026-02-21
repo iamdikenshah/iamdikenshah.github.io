@@ -1,3 +1,5 @@
+import { hero, personalInfo } from "@/lib/content";
+
 export default function HeroSection() {
   return (
     <section id="home-section" className="hero">
@@ -10,64 +12,54 @@ export default function HeroSection() {
         <div className="row align-items-center min-vh-100">
           <div className="col-lg-7 order-lg-2 order-2">
             <div className="hero-content" data-aos="fade-left">
-              <span className="hero-badge">Open to Agentic AI &amp; Mobile Projects</span>
+              <span className="hero-badge">{hero.badge}</span>
               <h1 className="hero-title">
-                Hi, I&apos;m <span className="gradient-text">Diken Shah</span>
+                {hero.greeting}{" "}
+                <span className="gradient-text">{hero.name}</span>
               </h1>
-              <p className="hero-subtitle">Agentic AI Engineer &amp; Mobile Architect</p>
+              <p className="hero-subtitle">{hero.subtitle}</p>
               <div className="hero-tech-strip">
-                {[
-                  { icon: "fas fa-brain", name: "Agentic AI" },
-                  { icon: "fas fa-link", name: "LangChain" },
-                  { icon: "fas fa-project-diagram", name: "LangGraph" },
-                  { icon: "fas fa-cogs", name: "CrewAI" },
-                  { icon: "fas fa-database", name: "RAG" },
-                  { icon: "fas fa-face-smile", name: "HuggingFace" },
-                  { icon: "fab fa-swift", name: "Swift" },
-                  { icon: "fas fa-mobile-alt", name: "SwiftUI" },
-                ].map((tag) => (
+                {hero.techTags.map((tag) => (
                   <span key={tag.name} className="tech-tag">
                     <i className={tag.icon}></i> {tag.name}
                   </span>
                 ))}
               </div>
               <div className="hero-stats">
-                <div className="stat-item">
-                  <span className="stat-number">13+</span>
-                  <span className="stat-label">Years Building</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">50+</span>
-                  <span className="stat-label">Products Shipped</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">6+</span>
-                  <span className="stat-label">Industries</span>
-                </div>
+                {hero.stats.map((stat) => (
+                  <div key={stat.label} className="stat-item">
+                    <span className="stat-number">{stat.number}</span>
+                    <span className="stat-label">{stat.label}</span>
+                  </div>
+                ))}
               </div>
               <div className="hero-actions">
-                <a href="#projects-section" className="btn btn-modern btn-primary-modern">
-                  <span>View Projects</span>
-                  <i className="fas fa-arrow-right"></i>
-                </a>
-                <a
-                  href="/resource/DikenShahCV.pdf"
-                  download="Diken-Shah-CV.pdf"
-                  className="btn btn-modern btn-outline-modern"
-                >
-                  <span>Download CV</span>
-                  <i className="fas fa-download"></i>
-                </a>
+                {hero.actions.map((action) => (
+                  <a
+                    key={action.text}
+                    href={action.href}
+                    className={`btn btn-modern ${
+                      action.type === "primary"
+                        ? "btn-primary-modern"
+                        : "btn-outline-modern"
+                    }`}
+                    {...("download" in action ? { download: action.download } : {})}
+                  >
+                    <span>{action.text}</span>
+                    <i className={action.icon}></i>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
           <div className="col-lg-5 order-lg-1 order-1 mb-4 mb-lg-0">
             <div className="hero-image-wrapper" data-aos="fade-right">
               <div className="hero-image-ring"></div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="hero-img"
-                src="/images/diken_shah_optimized.jpg"
-                alt="Diken Shah profile photo"
+                src={personalInfo.profileImage}
+                alt={`${personalInfo.name} profile photo`}
                 width={300}
                 height={300}
                 fetchPriority="high"
