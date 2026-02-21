@@ -107,5 +107,19 @@ AOS.init({
 	};
 	contentWayPoint();
 
+	// Scroll to hash anchor on page load (e.g. arriving from blog pages via ../index.html#blog-section)
+	if (window.location.hash) {
+		var hash = window.location.hash;
+		// Wait for AOS / Stellar / Waypoints to finish initialising before scrolling
+		setTimeout(function () {
+			var $target = $(hash);
+			if ($target.length) {
+				$('html, body').stop(true).animate({
+					scrollTop: $target.offset().top - 70
+				}, 600);
+			}
+		}, 400);
+	}
+
 })(jQuery);
 
