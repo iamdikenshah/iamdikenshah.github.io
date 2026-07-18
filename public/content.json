@@ -231,6 +231,15 @@
     "sectionDescription": "A mix of what I've shipped — from banking apps that handle real money to agentic AI systems that handle real conversations. Each one taught me something different.",
     "items": [
       {
+        "image": "images/project-web-4.png",
+        "category": "Web App",
+        "title": "Aagam Realty - Real Estate",
+        "description": "Real estate platform for Aagam Realty with property search by type, budget, and locality, curated residential & commercial listings, and WhatsApp enquiry integration.",
+        "tags": ["React", "JavaScript", "Real Estate"],
+        "liveUrl": "https://www.aagamrealty.com",
+        "lightboxTitle": "Aagam Realty - Real Estate"
+      },
+      {
         "image": "images/project-web-1.png",
         "category": "Web App",
         "title": "Interior by Sagar Davda",
