@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { footer, personalInfo } from "@/lib/content";
 
 export default function Footer() {
@@ -10,10 +11,10 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-col footer-about">
-            <a href="#home-section" className="footer-logo">
+            <Link href="/#home-section" className="footer-logo">
               <span className="brand-highlight">{footer.brandName[0]}</span>
               {footer.brandName.slice(1)}
-            </a>
+            </Link>
             <p className="footer-desc">{footer.description}</p>
             <div className="footer-social">
               <a href={socialMedia.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -37,7 +38,7 @@ export default function Footer() {
             <ul className="footer-nav">
               {footer.quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href}>
+                  <a href={`/${link.href}`}>
                     <i className="fas fa-chevron-right"></i> {link.label}
                   </a>
                 </li>
@@ -51,7 +52,7 @@ export default function Footer() {
             <ul className="footer-nav">
               {footer.services.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href}>
+                  <a href={`/${s.href}`}>
                     <i className="fas fa-chevron-right"></i> {s.label}
                   </a>
                 </li>

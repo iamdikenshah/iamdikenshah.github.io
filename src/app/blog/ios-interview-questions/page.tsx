@@ -703,7 +703,7 @@ export default function IOSInterviewQuestions() {
         .qa-question { background: #f8f9fa; padding: 18px 22px; font-weight: 600; font-size: 15px; color: #2d3748; cursor: pointer; display: flex; align-items: flex-start; gap: 12px; border: none; width: 100%; text-align: left; transition: background 0.2s; }
         .qa-question:hover { background: #edf2f7; }
         .qa-question:focus, .qa-question:focus-visible { outline: none; box-shadow: none; }
-        .qa-question-number { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; margin-top: 1px; }
+        .qa-question-number { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; margin-top: 1px; }
         .beginner-num { background: #10b981; }
         .intermediate-num { background: #3b82f6; }
         .advanced-num { background: #8b5cf6; }
@@ -715,14 +715,14 @@ export default function IOSInterviewQuestions() {
         .qa-answer code { font-family: 'Fira Code', 'Courier New', monospace; }
         .qa-toggle-icon { margin-left: auto; flex-shrink: 0; transition: transform 0.3s; color: #a0aec0; font-size: 13px; }
         .qa-toggle-icon.rotated { transform: rotate(180deg); }
-        .qa-section-label { display: inline-block; padding: 6px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
+        .qa-section-label { display: inline-block; padding: 6px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
         .level-beginner { background: #d1fae5; color: #065f46; }
         .level-intermediate { background: #dbeafe; color: #1e40af; }
         .level-advanced { background: #ede9fe; color: #5b21b6; }
         .level-divider { border: none; border-top: 2px dashed #e2e8f0; margin: 48px 0; }
         .quick-stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
         .quick-stat { flex: 1; min-width: 100px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; text-align: center; }
-        .quick-stat-value { font-size: 22px; font-weight: 800; color: #007ea7; }
+        .quick-stat-value { font-size: 22px; font-weight: 600; color: #007ea7; }
         .quick-stat-label { font-size: 12px; color: #718096; margin-top: 2px; }
       `}</style>
       <BlogLayout

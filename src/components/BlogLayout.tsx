@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import Link from "next/link";
 

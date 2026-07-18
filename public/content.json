@@ -338,7 +338,7 @@
     "posts": [
       {
         "url": "/blog/types-of-ai-agents",
-        "image": "/images/blog-ai-agents.jpg",
+        "image": "/images/blog-ai-agents.svg",
         "category": "Agentic AI",
         "date": "Feb 21, 2026",
         "readTime": "18 min read",
@@ -347,7 +347,7 @@
       },
       {
         "url": "/blog/slm-vs-llm",
-        "image": "/images/blog-slm-llm.jpg",
+        "image": "/images/blog-slm-llm.svg",
         "category": "Agentic AI",
         "date": "Feb 21, 2026",
         "readTime": "12 min read",
@@ -356,7 +356,7 @@
       },
       {
         "url": "/blog/building-simple-rag",
-        "image": "/images/blog-rag.jpg",
+        "image": "/images/blog-rag.svg",
         "category": "Agentic AI",
         "date": "Feb 16, 2026",
         "readTime": "8 min read",
@@ -365,7 +365,7 @@
       },
       {
         "url": "/blog/huggingface-local-pipeline",
-        "image": "/images/blog-hf.jpg",
+        "image": "/images/blog-hf.svg",
         "category": "HuggingFace",
         "date": "Feb 16, 2026",
         "readTime": "7 min read",
@@ -374,7 +374,7 @@
       },
       {
         "url": "/blog/clean-architecture-ios",
-        "image": "/images/blog-clean-arch.jpg",
+        "image": "/images/blog-clean-arch.svg",
         "category": "iOS Development",
         "date": "Feb 18, 2026",
         "readTime": "12 min read",
@@ -383,7 +383,7 @@
       },
       {
         "url": "/blog/ios-interview-questions",
-        "image": "/images/blog-ios-interview.jpg",
+        "image": "/images/blog-ios-interview.svg",
         "category": "iOS Development",
         "date": "Feb 18, 2026",
         "readTime": "20 min read",

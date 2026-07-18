@@ -75,7 +75,7 @@ function mockResponse(message: string): string {
       (b) =>
         `<a href="${b.url}" style="display:block;text-decoration:none;color:inherit;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;margin-top:10px;">` +
         `<div style="font-size:11px;color:#f97316;font-weight:600;margin-bottom:4px;">${b.tag} · ${b.time}</div>` +
-        `<div style="font-weight:700;font-size:14px;margin-bottom:4px;">${b.title}</div>` +
+        `<div style="font-weight:600;font-size:14px;margin-bottom:4px;">${b.title}</div>` +
         `<div style="font-size:12px;color:#64748b;line-height:1.5;">${b.desc}</div>` +
         `<div style="font-size:12px;color:#f97316;margin-top:6px;font-weight:600;">Read →</div>` +
         `</a>`,

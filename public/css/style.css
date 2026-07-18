@@ -11848,7 +11848,7 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-white);
   font-size: 16px;
   line-height: 1.8;
@@ -11888,8 +11888,8 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.3;
   color: var(--text-dark);
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 
 .text-primary {
@@ -11930,14 +11930,14 @@ h1, h2, h3, h4, h5,
   color: var(--text-dark);
   padding-top: .7rem;
   padding-bottom: .7rem;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 26px;
   letter-spacing: -0.5px;
 }
 
 .brand-highlight {
   color: var(--primary);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .ftco-navbar-light .navbar-brand:hover,
@@ -12092,7 +12092,7 @@ h1, h2, h3, h4, h5,
 }
 
 .navbar-brand {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 26px;
   text-transform: none;
   letter-spacing: -0.5px;
@@ -12187,7 +12187,7 @@ h1, h2, h3, h4, h5,
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   color: var(--text-dark);
   margin-bottom: 1rem;
@@ -12278,10 +12278,10 @@ h1, h2, h3, h4, h5,
 .stat-number {
   display: block;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--primary);
   line-height: 1.2;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .stat-label {
@@ -12470,7 +12470,7 @@ h1, h2, h3, h4, h5,
 .section-tag {
   display: inline-block;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--primary);
@@ -12479,7 +12479,7 @@ h1, h2, h3, h4, h5,
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
@@ -12576,7 +12576,7 @@ h1, h2, h3, h4, h5,
 
 .journey-content h3 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-heading);
   margin-bottom: 0.5rem;
   line-height: 1.3;
@@ -12666,7 +12666,7 @@ h1, h2, h3, h4, h5,
 
 .expertise-card h3 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
   color: var(--text-dark);
 }
@@ -12890,10 +12890,11 @@ h1, h2, h3, h4, h5,
   border-color: rgba(0, 126, 167, 0.2);
 }
 
-.timeline-date {
+.timeline-date,
+.timeline-period {
   display: inline-block;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary);
   background: rgba(0, 126, 167, 0.08);
   padding: 4px 14px;
@@ -12904,9 +12905,16 @@ h1, h2, h3, h4, h5,
 
 .timeline-content h3 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 .timeline-company {
@@ -12924,13 +12932,15 @@ h1, h2, h3, h4, h5,
   color: var(--primary);
 }
 
-.timeline-list {
+.timeline-list,
+.timeline-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.timeline-list li {
+.timeline-list li,
+.timeline-content ul li {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
@@ -12939,7 +12949,8 @@ h1, h2, h3, h4, h5,
   line-height: 1.7;
 }
 
-.timeline-list li::before {
+.timeline-list li::before,
+.timeline-content ul li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -13051,7 +13062,7 @@ h1, h2, h3, h4, h5,
 
 .project-category {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--primary);
@@ -13061,7 +13072,7 @@ h1, h2, h3, h4, h5,
 
 .project-info h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -13138,7 +13149,7 @@ h1, h2, h3, h4, h5,
 
 .contact-card h3 {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
@@ -13183,8 +13194,15 @@ h1, h2, h3, h4, h5,
 }
 
 .blog-card-image {
+  position: relative;
   width: 100%;
   height: 220px;
+  overflow: hidden;
+}
+.blog-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .blog-card-image-fallback {
@@ -13229,6 +13247,10 @@ h1, h2, h3, h4, h5,
 }
 
 .blog-card-category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
   display: inline-block;
   background: var(--primary);
   color: #fff;
@@ -13238,11 +13260,12 @@ h1, h2, h3, h4, h5,
   letter-spacing: 0.04em;
   padding: 0.25rem 0.7rem;
   border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 48, 73, 0.25);
 }
 
 .blog-card-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 1.3rem;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
@@ -13341,8 +13364,8 @@ h1, h2, h3, h4, h5,
 }
 
 .blog-post-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 2.6rem;
   color: var(--text-dark);
   line-height: 1.2;
@@ -13362,8 +13385,8 @@ h1, h2, h3, h4, h5,
 }
 
 .blog-post-content h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 1.6rem;
   color: var(--text-dark);
   margin-top: 2.5rem;
@@ -13378,7 +13401,7 @@ h1, h2, h3, h4, h5,
 }
 
 .blog-post-content h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--text-dark);
@@ -13468,7 +13491,7 @@ h1, h2, h3, h4, h5,
 .blog-post-content thead th {
   background: var(--primary);
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   padding: 0.85rem 1.2rem;
   text-align: left;
@@ -13510,7 +13533,7 @@ h1, h2, h3, h4, h5,
 .blog-agent-badge {
   display: inline-block;
   font-size: 0.72rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -13555,8 +13578,8 @@ h1, h2, h3, h4, h5,
   flex-shrink: 0;
 }
 .blog-author-info h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 1.1rem;
   color: var(--text-dark);
   margin-bottom: 0.3rem;
@@ -13668,7 +13691,7 @@ h1, h2, h3, h4, h5,
 
 .footer-cta-text h3 {
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 0.35rem;
 }
@@ -13691,7 +13714,7 @@ h1, h2, h3, h4, h5,
   background: #fff;
   color: var(--primary-dark) !important;
   border-color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
@@ -13758,7 +13781,7 @@ h1, h2, h3, h4, h5,
 /* Footer Logo */
 .footer-logo {
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #fff !important;
   text-decoration: none;
   display: inline-block;
@@ -13816,7 +13839,7 @@ h1, h2, h3, h4, h5,
 /* Footer Headings */
 .footer-heading {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 1.5rem;
   position: relative;
@@ -14120,6 +14143,5 @@ html {
   background: var(--primary-dark) !important;
   border-color: var(--primary-dark) !important;
   color: #fff !important;
-}
 }
 
